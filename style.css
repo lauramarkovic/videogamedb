@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+:root {
+  --lightgrey-color: #4d4e4f;
+  --blackish-color: #151515;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #191919;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+/* HEADER */
+
+header {
+  background-color: var(--blackish-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 40px 40px 20px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  color: palevioletred;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-right: 20px;
+  flex: 1;
+}
+
+.search-form {
+  flex: 4;
+  width: 100%;
+  border-radius: 30px;
+  background-color: var(--lightgrey-color);
+  position: relative;
+  transition: background-color 0.5s ease;
+}
+
+.search-form input {
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 15px;
+  border: 0;
+  border-radius: 30px;
+  padding: 0.8rem;
+  width: 80%;
+}
+
+.search-form input::placeholder {
+  color: #fff;
+  transition: color 0.5s ease;
+}
+
+.search-form:hover>input::placeholder {
+  color: var(--lightgrey-color);
+}
+
+.search-form input:focus {
+  outline: none;
+}
+
+.search-form:hover {
+  background-color: #eeeeee;
+}
+
+.search-form button {
+  border: none;
+  background-color: transparent;
+  transform: scale(1.4);
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.search-form button:focus {
+  outline: 0;
+}
+
+.user-buttons {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-buttons button {
+  border: 0;
+  border-radius: 10px;
+  font-family: inherit;
+  margin: 0 10px;
+  padding: 10px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.user-buttons button:focus {
+  outline: none;
+}
+
+.user-buttons button:hover {
+  background-color: var(--lightgrey-color);
+}
+
+/* MAIN */
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+main h1 {
+  margin: 1rem;
+  font-size: 40px;
+}
+
+.games {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game {
+  background-color: var(--blackish-color);
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.game:hover {
+  transform: scale(1.05);
+}
+
+.game img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.game .game-text {
+  padding: 16px 16px 24px;
+}
+
+.game-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.rating {
+  color: #16c952;
+  border: 1px solid #16c952;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.game h3 {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.game h3:hover {
+  color: var(--lightgrey-color);
+}
+
+.game p {
+  color: #bdbcb7;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 5px 0;
+}
+
+.game-text-line {
+  border: 1px solid var(--lightgrey-color);
+  border-radius: 20px;
+}
+
+.game button {
+  background-color: var(--lightgrey-color);
+  color: #fff;
+  font-family: inherit;
+  text-transform: uppercase;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px 0 10px;
+  transition: all 0.5s ease;
+}
+
+.game button:focus {
+  outline: none;
+}
+
+.game button:hover {
+  background-color: #fff;
+  color: #222;
+  font-weight: bold;
+}
