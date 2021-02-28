@@ -1,0 +1,17 @@
+/* MAIN */
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+main h1 {
+  margin: 1rem;
+  font-size: 40px;
+}
+
+.games {
+  display: flex;
+  flex-wrap: wrap;
+}
