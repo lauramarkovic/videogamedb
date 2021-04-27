@@ -1,0 +1,26 @@
+.main-select {
+  margin: 1rem;
+  font-family: inherit;
+}
+
+.main-select-container {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.main-select-container input {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  font-family: inherit;
+  border-radius: 10px;
+  border: 2px solid var(--blackish-color);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  background-color: var(--lightgrey-color);
+  color: #fff;
+}
+
+.main-select-container input:focus,
+.main-select-container input:active {
+  outline: none;
+}

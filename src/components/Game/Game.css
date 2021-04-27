@@ -28,6 +28,16 @@
   font-size: 16px;
 }
 
+.platform-icons .fab,
+.platform-icons .fas {
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+
+.platform-icons .fab .iconify {
+  margin: 0;
+}
+
 .rating {
   color: #16c952;
   border: 1px solid #16c952;
