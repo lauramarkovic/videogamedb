@@ -24,6 +24,15 @@ const DatePicker = ({ startingDate, fromDate, toDate, handleFromDate, handleToDa
         onChange={handleToDate}
       />
     </div>
+    <div className="order-games">
+      <label htmlFor="orderGamesBy">Order by:</label>
+      <select id="orderGamesBy" name="orderGamesBy">
+        <option value="relevance">Relevance</option>
+        <option value="release-date">Release date</option>
+        <option value="rating">Average rating</option>
+        <option value="name">Name</option>
+      </select>
+    </div>
   </div>
 );
 

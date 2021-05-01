@@ -1,6 +1,7 @@
 .main-select {
   margin: 1rem;
   font-family: inherit;
+  display: flex;
 }
 
 .main-select-container {
@@ -23,4 +24,30 @@
 .main-select-container input:focus,
 .main-select-container input:active {
   outline: none;
+}
+
+.order-games {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-games select {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  font-family: inherit;
+  border-radius: 10px;
+  border: 2px solid var(--blackish-color);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  background-color: var(--lightgrey-color);
+  color: #fff;
+}
+
+.order-games select:focus,
+.order-games select:active {
+  outline: none;
+}
+
+.order-games option {
+  background-color: #fff;
 }

@@ -1,10 +1,14 @@
 import React from 'react';
+import InfiniteScroll from "react-infinite-scroll-component";
+
 import Game from "../../components/Game/Game";
 import DatePicker from "../../components/DatePicker/DatePicker";
 
 import "./Games.css";
 
-const Games = ({ games, startingDate, fromDate, toDate, handleFromDate, handleToDate }) => {
+const Games = ({ games, startingDate, fromDate, toDate, handleFromDate, handleToDate, addPage }) => {
+
+  console.log(games.length);
 
   return (
     <main>
@@ -16,9 +20,14 @@ const Games = ({ games, startingDate, fromDate, toDate, handleFromDate, handleTo
         handleFromDate={handleFromDate}
         handleToDate={handleToDate}
       />
-      <div className="games">
+      <InfiniteScroll
+        className="games"
+        dataLength={games.length}
+        hasMore={true}
+        next={addPage}
+      >
         {
-          games.map(({ id, name, background_image, released, metacritic, platforms, genres }) => (
+          games && games.map(({ id, name, background_image, released, metacritic, platforms, genres }) => (
             <Game
               key={id}
               name={name}
@@ -28,7 +37,7 @@ const Games = ({ games, startingDate, fromDate, toDate, handleFromDate, handleTo
             />
           ))
         }
-      </div>
+      </InfiniteScroll>
     </main>
   );
 }
