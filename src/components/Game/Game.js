@@ -4,7 +4,7 @@ import "./Game.css";
 const Game = ({ name, background_image, released, metacritic, platforms, genres }) => {
 
   let platformArray = [];
-  platforms.map(platform => {
+  platforms && platforms.map(platform => {
     return platformArray.push(Object.values(platform.platform));
   });
   const gamesPlatform = platformArray.flat();

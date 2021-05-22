@@ -51,7 +51,7 @@ header {
   transition: background-color 0.5s ease;
 }
 
-.search-form input {
+#search-input {
   background-color: transparent;
   font-family: inherit;
   font-size: 15px;
@@ -59,22 +59,32 @@ header {
   border-radius: 30px;
   padding: 0.8rem;
   width: 80%;
+  transition: background-color 0.5s ease-in-out;
+  cursor: pointer;
 }
 
-.search-form input::placeholder {
+#search-input::placeholder {
   color: #fff;
-  transition: color 0.5s ease;
+  transition: color 0.5s ease-in-out;
 }
 
-.search-form:hover>input::placeholder {
+.search-form:hover>#search-input::placeholder {
   color: var(--lightgrey-color);
 }
 
-.search-form input:focus {
+#search-input:hover,
+#search-input:focus,
+#search-input:active {
   outline: none;
 }
 
-.search-form:hover {
+#search-input:focus::placeholder {
+  color: var(--lightgrey-color);
+}
+
+.search-form:hover,
+.search-form:active,
+.search-form:focus-within {
   background-color: #eeeeee;
 }
 
