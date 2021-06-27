@@ -16,8 +16,8 @@ const App = () => {
   const [toDate, setToDate] = useState(nextDate);
   const [games, setGames, isLoading] = useFetch(fromDate, toDate);
 
-  const [title, setTitle] = useState('Upcoming Games');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [title] = useState('Upcoming Games');
+  // const [searchTerm, setSearchTerm] = useState('');
 
 
   const handleFromDate = (e) => {
