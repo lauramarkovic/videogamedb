@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { Switch, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Loader from "./components/Loader/Loader";
 import Main from "./pages/Main/Main";
+import SignUp from "./components/SignUp/SignUp";
 
 import { useFetch } from "./hooks/useFetch";
 import { currentDate, nextDate } from "./util/constants";
@@ -33,19 +35,27 @@ const App = () => {
   return (
     <div>
       <Header />
-      {
-        isLoading
-          ? <Loader />
-          : <Main
-            title={title}
-            games={games}
-            startingDate={currentDate}
-            fromDate={fromDate}
-            toDate={toDate}
-            handleFromDate={handleFromDate}
-            handleToDate={handleToDate}
-          />
-      }
+      <Switch>
+        {
+          isLoading
+            ? <Route exact path="/" component={Loader} />
+            : <Route
+              exact
+              path="/"
+              render={() =>
+                <Main
+                  title={title}
+                  games={games}
+                  startingDate={currentDate}
+                  fromDate={fromDate}
+                  toDate={toDate}
+                  handleFromDate={handleFromDate}
+                  handleToDate={handleToDate}
+                />
+              } />
+        }
+        <Route path="/signup" component={SignUp} />
+      </Switch>
     </div>
   );
 }

@@ -1,10 +1,11 @@
 .game {
   background-color: var(--blackish-color);
   margin: 1rem;
+  width: 300px;
+  flex: 1 auto;
+  overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
-  width: 300px;
-  overflow: hidden;
   transition: transform 0.3s ease;
 }
 
@@ -15,6 +16,7 @@
 .game img {
   width: 100%;
   object-fit: cover;
+  max-height: 180px;
 }
 
 .game .game-text {

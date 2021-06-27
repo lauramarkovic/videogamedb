@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 function Header() {
@@ -13,7 +14,9 @@ function Header() {
         <button><i className="fas fa-search"></i></button>
       </form>
       <div className="user-buttons">
-        <button>Sign Up</button>
+        <Link to="/signup">
+          <button>Sign Up</button>
+        </Link>
         <button>Login</button>
       </div>
     </header>
