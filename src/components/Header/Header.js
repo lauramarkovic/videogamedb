@@ -6,7 +6,9 @@ function Header() {
   return (
     <header>
       <div className="logo-container">
-        <h2 className="logo">Laura's Video Game Database</h2>
+        <Link to="/" className="header-link">
+          <h2 className="logo">Laura's Video Game Database</h2>
+        </Link>
         <p>created with the <a href="https://rawg.io/" target="_blank" rel="noreferrer" id="logo-link">RAWG API</a></p>
       </div>
       <form className="search-form">

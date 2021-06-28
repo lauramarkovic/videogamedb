@@ -10,6 +10,10 @@ header {
   margin-bottom: 30px;
 }
 
+.header-link {
+  text-decoration: none;
+}
+
 .logo-container {
   display: flex;
   flex-direction: column;
