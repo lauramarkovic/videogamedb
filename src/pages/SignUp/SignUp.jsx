@@ -5,7 +5,7 @@ const SignUp = () => {
   return (
     <div className="signup">
       <form className="form">
-        <h2>Sign Up</h2>
+        <h2>Register an account</h2>
         <div className="form-input">
           <label for="username">Username</label>
           <input type="text" id="username" name="username" placeholder="Username" required />
@@ -22,7 +22,7 @@ const SignUp = () => {
           <label for="confirmPassword">Confirm Password</label>
           <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required />
         </div>
-        <button type="submit" className="submitBtn">Submit</button>
+        <button type="submit" className="btn signUpBtn">Submit</button>
       </form>
     </div>
   )

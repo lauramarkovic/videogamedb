@@ -3,7 +3,8 @@ import { Switch, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Loader from "./components/Loader/Loader";
 import Main from "./pages/Main/Main";
-import SignUp from "./components/SignUp/SignUp";
+import SignUp from "./pages/SignUp/SignUp";
+import SignIn from "./pages/SignIn/SignIn";
 
 import { useFetch } from "./hooks/useFetch";
 import { currentDate, nextDate } from "./util/constants";
@@ -55,6 +56,7 @@ const App = () => {
               } />
         }
         <Route path="/signup" component={SignUp} />
+        <Route path="/login" component={SignIn} />
       </Switch>
     </div>
   );
